@@ -138,6 +138,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
+  dropzone: {
+    backgroundColor: "#144411 !important",
+    color: "#232323",
+  },
   appbar: {
     background: 'linear-gradient(to right, #ff8a00, #da1b60)',
     boxShadow: 'none',
@@ -272,8 +276,8 @@ export const ImageUpload = () => {
               {!image && <CardContent className={classes.content}>
                 <DropzoneArea
                   acceptedFiles={['image/*']}
-                  dropzoneText={"Drag and drop an image of a potato plant leaf to process"}
-                  onChange={onSelectFile}
+                  dropzoneText={"Drag and drop an image of a skin lesion to process"}
+                  onChange={onSelectFile} className={ classes.dropzone }
                 />
               </CardContent>}
               {data && <CardContent className={classes.detail}>
